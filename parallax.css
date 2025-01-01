@@ -1,0 +1,382 @@
+/* Reset and General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#logo {
+  color: #ccc;
+  top: 0;
+  margin-left: -380px;
+}
+
+#nav ul {
+  border-radius: 15px;
+  padding:3px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+#nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 3px 10px;
+  margin-inline: 8px;
+}
+
+#nav ul li a.active {
+  transition-duration: 1s;
+  color: yellow;
+  background-color: #111;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+  box-shadow: 0 5px 40px 1px;
+}
+
+#nav ul li a:hover {
+  color: yellow;
+}
+
+#hire{
+  margin-top: 15px;
+  margin-right: -350px;
+}
+#hire a{
+  font-weight: 550;
+  color: yellow;
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 17px;
+  text-decoration: none;
+  border: 2px solid yellow;
+}
+#hire a:hover{
+  color: #000;
+  border-color: #000;
+  background-color: yellow;
+}
+/* Horizontal Content */
+main {
+  display: flex;
+  width: 500%; /* Adjust for the number of sections */
+  height: 100vh;
+  transition: transform 1s ease-in-out;
+}
+
+.section {
+  min-width: 100vw;
+  height: 100vh;
+}
+/* home or about */
+#home {
+  background-image: linear-gradient(333deg, #333,#111, #000), url(/bg2.png);
+  background-size: contain;
+  background-blend-mode:difference;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  padding-top: 50px;
+  display: flex;
+}
+#home #name {
+  margin-left: 1%;
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  width: 600px;
+}
+#home #name b {
+  color: yellow;
+  font-size: 75px;
+}
+#name h1 {
+  color: #fff;
+  font-size: 50px;
+  animation-name: slideh1;
+  animation-duration: 1s;
+}
+@keyframes slideh1 {
+  0%{
+    scale: 0.7;
+    opacity: 0;
+  }
+  100%{
+    scale: 1;
+    opacity: 2;
+  }
+}
+@keyframes slideh2{
+  0%{
+    transform: translatex(100px);
+    opacity: 0;
+  }
+  100%{
+    transform:translatex(0px) ;
+    opacity: 1;
+  }
+}
+#name h2{
+  margin-left: 55%;
+  color: #ccc;
+  margin-top: -5%;
+  animation-name: slideh2;
+  animation-duration: 2s;
+}
+#name p{
+  color: #bbb;
+  animation-name: fadep;
+  animation-duration: 2s;
+}
+#name #more-info{
+  margin-top: 18%;
+  color: #fff835;
+}
+@keyframes fadep {
+  0%{
+    scale: 0.8;
+    opacity: 0;
+  }
+  100%{
+    scale: 1;
+    opacity: 1;
+  }
+}
+#name #clg{
+  width: 540px;
+  justify-content: center;
+  background-color: #111;
+  margin-top: -40px;
+  margin-left: 420px;
+  margin-right: -380px;
+  border: 1px solid #444;
+  padding: 20px 10px;
+  animation-name: upclg;
+  animation-duration: 1s;
+}
+@keyframes upclg {
+  0%{
+    transform: translateY(100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+#name #clg b{
+  margin-top: -50px;
+  font-size: 18px;
+  color: wheat;
+}
+#name #clg p{
+  font-weight: 00;
+  font-size: 15px;
+  color: #fff;
+  animation: none;
+}
+#name #clg i{
+  color: #aaa;
+}
+#home #pic img{
+  animation-name: fadeimg;
+  animation-duration: 1s;
+}
+@keyframes fadeimg {
+  0%{
+    transform: translatex(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+/* education  */
+/*
+#edu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  background-image: linear-gradient(25deg, rgb(65, 65, 65), rgba(0, 0, 0, 1)), url(/clgbg.jpg);
+  background-position: top;
+  background-blend-mode: hard-light;
+}
+#edu h1{
+  font-size: 50px;
+  margin-left: 50px;
+  margin-top: 150px;
+  color: yellow;
+}
+#edu h1 i{
+  color: #fff;
+  font-size: 100px;
+}
+#edu-box{
+  align-items: center;
+  margin-top: 2%;
+  margin-right: 5%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.clg{
+  text-align: left;
+  align-items: center;
+  border-top-left-radius: 75px;
+  border-end-end-radius: 75px;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fff;
+}
+.clg:hover{
+  backdrop-filter: blur(5px);
+  transform: scale(1.01);
+}
+.clg h2{
+  font-size: 22px;
+  padding: 5px;
+  margin: 0;
+}
+.clg .e-name{
+  padding: 5px;
+  margin: 0;
+  color: #ccc;
+}
+.clg .batch{
+  margin: 0;
+  padding: 5px;
+  color: #aaa;
+}
+#l1{
+  width: 500px;
+}
+#l1:hover{
+  box-shadow: 0 0 15px rgb(255, 255, 30);
+}
+#l2{
+  width: 400px;
+}
+#l2:hover{
+  box-shadow: 0 0 15px rgb(255, 255, 80);
+}
+#l3{
+  width: 300px;
+}
+#l3:hover{
+  box-shadow: 0 0 15px rgb(255, 255, 160);
+}
+*/
+
+/* skills */
+#skill {
+  background-image: linear-gradient(333deg, #333,#111, #000), url(/bgskill.jpg);
+  background-blend-mode: soft-light;
+  background-position: right;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+#skill h1{
+  margin-top: 200px;
+  margin-left: 50px;
+  font-size: 60px;
+  color: yellow;
+}
+#skill h1 i{
+  color: #fff;
+  font-size: 80px;
+}
+#s-box{
+  margin-right: 0;
+  margin-top: 5%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+.lang{
+  font-size: 20px;
+  width: 160px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  padding-top: 9px;
+  margin: 5px;
+  border: 2px solid #555;
+  background-color: #111;
+  backdrop-filter: blur(15px);
+}
+.lang i{
+  font-size: 20px;
+}
+#s-box h3{
+  margin: 5px;
+  color: #fff;
+  font-size: 25px;
+}
+.skill-box{
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#frontend{
+  color: #fff;
+}
+#frontend #l1{
+  color: blue;
+}
+#backend{
+  display: flex;
+  color: #fff;
+}
+#tools{
+  display: flex;
+  color: #fff;
+}
+
+#certi {
+  background-image: linear-gradient(25deg, rgb(65, 65, 65), rgba(0, 0, 0, 1));
+}
+#project {
+  background-image: linear-gradient(25deg, rgb(65, 65, 65), rgba(0, 0, 0, 1));
+}
+#contact {
+  background-color: #ccc;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #nav ul li a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .section h1 {
+    font-size: 24px;
+  }
+
+  .section p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}

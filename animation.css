@@ -1,0 +1,166 @@
+
+@keyframes hello {
+  0%{
+    opacity: 0;
+    transform: translateX(700px);
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes h1 {
+  0% {
+    scale: 1.1;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dev {
+  0%{
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadepic {
+  0% {
+    scale: 1.1;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes collide {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    transform: translatex(-400px);
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(5px);
+  }
+}
+/*skill bars */
+@keyframes html {
+  0% {
+    visibility: visible;
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 90%;
+  }
+}
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 60%;
+  }
+}
+@keyframes bs {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 50%;
+  }
+}
+@keyframes tw {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 40%;
+  }
+}
+@keyframes cpp {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 90%;
+  }
+}
+@keyframes python {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 60%;
+  }
+}
+@keyframes php {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 70%;
+  }
+}
+@keyframes sql {
+  0% {
+    width: 0;
+  }
+  100%{
+    visibility: visible;
+    width: 50%;
+  }
+}
+@keyframes social {
+  0%{
+    visibility: visible;
+    transform: translateX(-200px);
+  }
+  50%{
+    visibility: visible;
+    transform: translateX(20px);
+  }
+  100%{
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+@keyframes form {
+  0%{
+    visibility: visible;
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100%{
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+/*common */
+@keyframes fades {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

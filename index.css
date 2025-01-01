@@ -1,0 +1,563 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: transparent;
+}
+header h1 {
+  color: #999;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+header a {
+  font-weight: 550;
+  color: yellow;
+  padding: 2px 6px;
+  margin-top: 12px;
+  margin-right: 20px;
+  text-decoration: none;
+  border: 2px solid yellow;
+  border-radius: 8px;
+}
+header a:hover {
+  color: #000;
+  border-color: #000;
+  background-color: yellow;
+}
+
+/* Navigation Menu */
+.nav {
+  margin-top: 7px;
+  padding: 0px;
+  border: 1px solid #aaa;
+  border-radius: 30px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+}
+.nav-item.active {
+  color: yellow;
+  border: 2px solid yellow;
+  box-shadow: 0 0 30px 5px #fff835;
+  border-radius: 20px;
+  transition-duration: 1s;
+}
+
+.nav-item:hover {
+  color: yellow;
+}
+
+/* Section Container */
+.sections {
+  display: flex;
+  justify-content: space-between;
+  width: 500vw; /* 5 sections, so 500% width */
+  transition: transform 0.5s ease-in-out;
+}
+
+.section {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+/* about section */
+.section:nth-child(1) {
+  background-image: linear-gradient(333deg, #333, #111, #000), url(/bg2.png);
+  background-size: contain;
+  background-position: top;
+  background-blend-mode: difference;
+}
+#about #intro h3 {
+  width: 700px;
+  margin-left: 5%;
+  margin-top: 25%;
+  margin-bottom: -8%;
+  font-size: 50px;
+  animation: hello 1s;
+}
+#intro h1 {
+  margin-left: 5%;
+  text-align: left;
+  color: yellow;
+  font-size: 70px;
+  animation-name: h1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+#about #intro h2 {
+  margin-top: -5%;
+  margin-left: 51%;
+  animation: dev 1s;
+}
+#intro p {
+  font-weight: 100;
+  margin-left: 5%;
+  font-size: 15px;
+  width: 620px;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  animation-name: fades;
+  animation-duration: 1.5s;
+}
+#intro #more-info {
+  margin-top: 20%;
+  color: yellow;
+}
+#clg {
+  width: 600px;
+  margin-right: -0%;
+  margin-left: 59%;
+  padding: 5px;
+  margin-top: -5%;
+  border: 1px solid #ddd;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-name: collide;
+  animation-duration: 1s;
+}
+#clg b {
+  font-size: 14px;
+  color: rgb(186, 186, 96);
+}
+#clg p {
+  visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-name: collide;
+  animation-duration: 1s;
+  margin: 8px;
+  font-size: 13px;
+}
+#about #pic {
+  margin-top: 1%;
+  margin-left: 9%;
+  animation-name: fadepic;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* skills section */
+.section:nth-child(2) {
+  background-image: linear-gradient(333deg, #333, #111, #000), url(/bgblob.png);
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+}
+#skills h1 {
+  color: #000;
+  font-size: 70px;
+  margin-left: 10%;
+  margin-top: 20%;
+  b {
+    color: yellow;
+  }
+  animation-name: h1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+#skills h1 i {
+  font-size: 80px;
+}
+#s-box {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  right: 0;
+  margin-top: 7%;
+  margin-right: 10%;
+}
+.skill-set {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap: 10px;
+  animation: fades 3s;
+}
+.skill-set h3 {
+  font-size: 20px;
+  color: #bbb;
+}
+.lang {
+  font-size: 18px;
+  color: #fff;
+  width: 250px;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+/* Skill bar container */
+.bar-container {
+  display: block;
+  background-color: #ddd;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+/* Skill bars */
+.bar {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.bar.html {
+  width: 90%;
+  background-color: #2965f1;
+  visibility: hidden;
+  animation: html 1s 0.5s forwards;
+}
+.bar.css {
+  width: 90%;
+  background-color: #f16529;
+  visibility: hidden;
+  animation: html 1s 1s forwards;
+}
+
+.bar.js {
+  width: 60%;
+  background-color: #f7df1e;
+  visibility: hidden;
+  animation: js 1s 1.5s forwards;
+}
+
+.bar.bs {
+  width: 50%;
+  background-color: #563d7c;
+  visibility: hidden;
+  animation: bs 1s 2s forwards;
+}
+.bar.tw {
+  width: 50%;
+  background-color: darkcyan;
+  visibility: hidden;
+  animation: tw 1s 2.5s forwards;
+}
+.bar.cpp {
+  width: 90%;
+  background-color: #34a853;
+  visibility: hidden;
+  animation: cpp 1s 0.5s forwards;
+}
+
+.bar.python {
+  width: 60%;
+  background-color: midnightblue;
+  visibility: hidden;
+  animation: python 1s 1s forwards;
+}
+
+.bar.php {
+  width: 70%;
+  background-color: #787cb5;
+  visibility: hidden;
+  animation: php 1s 1.5s forwards;
+}
+
+.bar.mysql {
+  width: 50%;
+  background-color: #f29111;
+  visibility: hidden;
+  animation: sql 1s 2s forwards;
+}
+
+/* certification */
+.section:nth-child(3) {
+  background-image: linear-gradient(333deg, #333, #111, #000), url(/bgblob.png);
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+}
+#certi h1 {
+  margin-top: 20.5%;
+  margin-left: 5.5%;
+  font-size: 65px;
+  color: #000;
+  animation: h1 2s;
+  i {
+    color: yellow;
+    font-style: normal;
+  }
+}
+#certi-box {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 500px;
+  height: 470px;
+  background: transparent;
+  animation: fades 3s;
+}
+
+.certificates {
+  min-width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  display: none;
+}
+
+.certificates.active {
+  display: block;
+}
+
+.certificates img {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 50px;
+  color: #888;
+  background: none;
+  border: none;
+  top: 40%;
+  position: absolute;
+  padding: 10px;
+}
+
+.a-left {
+  left: 150px;
+}
+
+.a-right {
+  right: 150px;
+}
+
+.arrow:hover {
+  color: yellow;
+}
+.certificates p{
+  margin: 8px auto;
+  width: 350px;
+}
+.certificates h3{
+  color: #fff;
+}
+
+/* projects */
+.section:nth-child(4) {
+  background-image: linear-gradient(333deg, #333, #111, #000), url(/bgblob.png);
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-between;
+}
+#project h1 {
+  color: #000;
+  font-size: 70px;
+  margin-top: 18%;
+  margin-left: 11%;
+  i {
+    color: yellow;
+    font-style: normal;
+  }
+  animation: h1 2s;
+}
+#project-box{
+  width: 40%;
+  height: 50%;
+  margin-top: 10%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  animation: fades 3s;
+}
+#tile-box{
+  margin-right: -15%;
+  display: flex;
+  flex-direction: column;
+}
+.tiles{
+  align-items: center;
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+  margin: 5px 2px;
+  background: #000;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  border-radius: 8px;
+}
+.tiles:hover{
+  transform: translateX(-4%);
+  transition-duration: 1s;
+}
+.tiles img{
+  margin: 5px;
+  height: 45px;
+}
+.tiles h3{
+  font-weight: 500;
+  font-size: 15px;
+  margin: 5px;
+}
+#project-info{
+  padding: 10px;
+  height: auto;
+  width: 90%;
+}
+#project-info > div {
+  transform: translateX(10px);
+  opacity: 0;
+  display: none;
+  transition: transform 2s;
+}
+
+#project-info > div.active {
+  transform: translateX(0px);
+  opacity: 1;
+  display: block;
+}
+
+/* contacts */
+.section:nth-child(5) {
+  background-image: linear-gradient(333deg, #333, #111, #000);
+}
+#contact {
+  display: flex;
+  justify-content: space-between;
+}
+#contact h1 {
+  color: #000;
+  font-size: 55px;
+  animation: h1 1s;
+}
+.bg {
+  z-index: 0;
+  margin-top: -25%;
+  margin-left: -60%;
+  border-radius: 50%;
+  height: 200%;
+  width: 100%;
+  background-color: yellow;
+}
+#contact #me {
+  z-index: 10;
+  margin-top: 10%;
+  margin-left: -65%;
+}
+#social {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#social a {
+  font-style: normal;
+  font-family: Verdana;
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
+}
+#email {
+  visibility: hidden;
+  animation: social 0.5s forwards;
+}
+#wp {
+  visibility: hidden;
+  animation: social 0.5s 0.5s forwards;
+}
+#lnkd {
+  visibility: hidden;
+  animation: social 0.5s 1s forwards;
+}
+#insta {
+  visibility: hidden;
+  animation: social 0.5s 1.5s forwards;
+}
+#git {
+  visibility: hidden;
+  animation: social 0.5s 2s forwards;
+}
+#fb {
+  visibility: hidden;
+  animation: social 0.5s 2.5s forwards;
+}
+#social a i {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+}
+#social a:hover {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+#contact #form-box {
+  margin-top: 15%;
+  margin-right: 10%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  animation: form 0.5s 0.5s forwards;
+}
+#form-box form {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 30px;
+  border: 2px solid #444;
+  animation: fades 1s forward;
+}
+#form-box input {
+  background-color: transparent;
+  margin: 10px;
+  width: 350px;
+  padding: 2px 8px;
+  border-color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#form-box textarea {
+  width: 375px;
+  height: 100px;
+  border-color: #fff;
+  background-color: #222;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+#form-box button {
+  margin: 5px;
+  border-radius: 5px;
+}

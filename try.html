@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      height: 80%;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      padding: 20px;
+    }
+
+    .text-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .text-content h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .text-content p {
+      color: #555;
+    }
+
+    .tiles-wrapper {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .tile:hover {
+      transform: scale(1.05);
+    }
+
+    .tile img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .project-info {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-left: 20px;
+    }
+
+    .project-info > div {
+      display: none;
+    }
+
+    .project-info > div.active {
+      display: block;
+    }
+
+    .project-info h3 {
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .project-info p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Text Content -->
+    <div class="text-content">
+      <h1>My Projects</h1>
+      <p>Explore my projects by clicking the tiles on the top-right corner. Details will appear in the center.</p>
+    </div>
+
+    <!-- Center Project Info -->
+    <div id="project-info" class="project-info">
+      <div id="project-1" class="active">
+        <h3>CurateBlog</h3>
+        <p>A blogging platform built using PHP and MySQL for seamless content creation and management.</p>
+      </div>
+      <div id="project-2">
+        <h3>Farmer's App</h3>
+        <p>An AI-powered application for farmers to check Minimum Support Price (MSP) and market trends.</p>
+      </div>
+      <div id="project-3">
+        <h3>Lost & Found Tracker</h3>
+        <p>A web-based application to track lost and found items using image recognition technology.</p>
+      </div>
+    </div>
+
+    <!-- Right Tiles -->
+    <div class="tiles-wrapper">
+      <div class="tile" onclick="showProjectInfo('project-1')">
+        <img src="https://via.placeholder.com/50" alt="Project 1">
+        <div>CurateBlog</div>
+      </div>
+      <div class="tile" onclick="showProjectInfo('project-2')">
+        <img src="https://via.placeholder.com/50" alt="Project 2">
+        <div>Farmer's App</div>
+      </div>
+      <div class="tile" onclick="showProjectInfo('project-3')">
+        <img src="https://via.placeholder.com/50" alt="Project 3">
+        <div>Lost & Found Tracker</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showProjectInfo(projectId) {
+      const projects = document.querySelectorAll("#project-info > div");
+      projects.forEach((project) => {
+        project.classList.remove("active");
+      });
+      document.getElementById(projectId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
